@@ -1,0 +1,387 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa; /* Light background color for a clean look */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  font-size: 1rem; /* Base font size */
+}
+
+/* Trigger Button Styles */
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 1000;
+}
+
+.trigger:hover {
+  color: #007bff; /* Bootstrap primary color */
+}
+/* Layout Styles */
+.ant-layout {
+  height: 100vh; /* Use full height */
+  display: flex; /* Flexbox layout for proper positioning */
+  margin: 0; /* Remove margin */
+}
+
+.ant-layout-sider {
+  flex: 0 0 250px !important; /* Set sidebar width */
+  max-width: 250px !important; /* Ensure max width */
+  min-width: 250px !important; /* Ensure min width */
+  width: 250px !important; /* Ensure width */
+  background-color: #343a40; /* Dark sidebar for contrast */
+  position: fixed; /* Fix the sidebar in place */
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.ant-layout-sider-collapsed {
+  flex: 0 0 80px !important; /* Collapsed width */
+  max-width: 80px !important;
+  min-width: 80px !important;
+  width: 80px !important;
+}
+
+/* Ensure content doesn't overlap with the sidebar */
+.site-layout {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  transition: margin-left 0.3s; /* Smooth transition */
+}
+
+.site-layout.collapsed {
+  margin-left: 80px; /* Adjust for collapsed state */
+}
+
+/* Menu Item Styles */
+.ant-menu-item {
+  background-color: rgba(80, 85, 88, 0.8); /* Semi-transparent background */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 48px;
+}
+
+.ant-menu-item:hover {
+  background-color: rgb(59, 57, 57); /* Full opacity on hover */
+}
+
+.ant-menu-item .anticon {
+  margin-right: 20px; /* Space between icon and text */
+}
+
+.ant-menu-item.active {
+  background-color: rgba(0, 128, 255, 0.8); /* Different color for active item */
+  color: white; /* Change text color for active item */
+}
+
+.ant-menu-item.active {
+  background-color: rgba(0, 128, 255, 0.8); /* Different color for active item */
+  color: white; /* Change text color for active item */
+}
+
+
+/* Responsive Logo Display */
+.logo {
+  background-color: rgba(0, 128, 255, 0.8); /* Light blue background */
+  padding: 10px; /* Padding around the text */
+  max-width: 280px; /* Set a maximum width */
+  margin: 0 auto; /* Center the logo */
+  height:100px;
+}
+
+.sm-logo {
+  display: none;
+}
+
+.ant-layout-sider-collapsed .sm-logo {
+  display: block;
+}
+
+.ant-layout-sider-collapsed .lg-logo {
+  display: none;
+}
+
+/* Header Styles */
+.ant-layout-header {
+  background: #f0f8ff;
+}
+
+.ant-layout-header h5 {
+  line-height: 20px;
+  font-size: 14px;
+  color: #495057; /* Darker text for better readability */
+}
+
+.ant-layout-header p {
+  line-height: 20px;
+  font-size: 13px;
+  color: #6c757d; /* Gray text for secondary information */
+}
+
+.ant-layout-header div .badge {
+  top: 16px;
+  right: -6px;
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Login Form Styles */
+.login-form {
+  background-color: #ffffff; /* White background for form */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-header {
+  color: #343a40; /* Dark text for title */
+}
+
+.login-input {
+  border: 1px solid #ced4da; /* Light border for inputs */
+  border-radius: 4px;
+  padding: 10px; /* More padding for comfort */
+}
+
+.login-input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Light blue shadow on focus */
+}
+
+.login-button {
+  background-color: #007bff; /* Main button color */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  background-color: #f8f9fa; /* Light background for the dashboard */
+  padding: 20px; /* Padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dashboard-header {
+  font-size: 24px; /* Larger font size for the header */
+  color: #343a40; /* Darker text for better readability */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.dashboard-card {
+  background-color: #ffffff; /* White card background */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+  padding: 15px; /* Padding inside the card */
+  margin-bottom: 20px; /* Space between cards */
+  transition: transform 0.3s; /* Smooth transform on hover */
+  
+}
+
+.dashboard-card:hover {
+  transform: scale(1.01); /* Slightly enlarge card on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.dashboard-card-title {
+  font-size: 18px; /* Card title size */
+  color: #007bff; /* Use main theme color for titles */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.dashboard-card-content {
+  font-size: 14px; /* Content font size */
+  color: #495057; /* Darker text for content */
+}
+
+/* Statistics Dashboard */
+.dashboard-statistics {
+  display: flex; /* Change to flex if needed, but we will make it a column */
+  flex-direction: column; /* Ensure items stack vertically */
+  width: 100%; /* Full width */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+}
+
+/* List Styles */
+ul {
+  list-style-type: none; /* Removes bullets */
+  padding: 0;
+}
+
+ul li {
+  background: #f0f8ff; /* Light background for list items */
+  margin: 5px 0; /* Space between list items */
+  padding: 10px;
+  border-radius: 4px; /* Rounded corners for list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .ant-layout-sider {
+    width: 200px; /* Reduce sidebar width */
+  }
+
+  .trigger {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .dashboard-header {
+    font-size: 22px; /* Adjust header size */
+  }
+
+  .dashboard-card {
+    margin: 10px 0; /* Reduce margin between cards */
+  }
+
+  .login-form {
+    padding: 15px; /* Less padding */
+  }
+
+  .login-input, .login-button {
+    width: 100%; /* Full width for inputs and buttons */
+  }
+
+  /* Adjust graph size and layout for smaller screens */
+  .dashboard-card-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  }
+}
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .ant-layout-sider {
+    width: 50px; /* Further reduce sidebar width */
+  }
+
+  .dashboard-header {
+    font-size: 18px; /* Smaller header size */
+  }
+
+  .dashboard-card {
+    display: block;
+    padding: 10px; /* More padding for smaller screens */
+  }
+
+  /* Hide statistics on smaller devices */
+  .dashboard-statistics {
+    display: none; /* Hide statistics */
+  }
+
+  /* Make adjustments for static graphs */
+  .static-graph {
+    display: none; /* Hide static graphs */
+  }
+
+  /* Hide chart on smaller screens */
+  #chart {
+    display: none; /* Hide chart on smaller screens if not needed */
+  }
+}
+
+/* Custom Scrollbars for Main Content */
+main::-webkit-scrollbar {
+  width: 8px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #007bff; /* Match with your theme color */
+  border-radius: 10px;
+}
+
+main::-webkit-scrollbar-track {
+  background: hsl(209, 81%, 6%); /* Light background for track */
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+.container {
+  max-width: 600px; /* Set a max width for the form */
+  margin: auto; /* Center the container */
+  padding: 20px; /* Padding for spacing */
+}
+
+/* Custom styles for AttendanceList */
+.table th, .table td {
+  vertical-align: middle; /* Aligns text in the center */
+}
+/* Custom styles for EditUser component */
+.alert {
+  margin-bottom: 20px; /* Space below alert */
+}
+.students-container {
+  background-color: #f4f4f4; /* Light gray background */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  padding: 20px; /* Add some padding for aesthetics */
+  overflow-y: auto; /* Allows scrolling within this container */
+  color: #333; /* Darker text color for better contrast */
+}
+
+
+
+.create-result-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.create-result-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-result-container input[type="text"],
+.create-result-container input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-result-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.create-result-container button:hover {
+  background-color: #0056b3;
+}
