@@ -24,8 +24,8 @@ import EditResultForm1 from './pages_inst/EditResultForm1';
 import Result1 from './pages_inst/Results1';
 import ViewResults1 from './pages_inst/ViewResults1';
 import Register from './pages/Register';
-import StudentDashboard from './pages_students/Student-dashboard';
-import ResultTable from './pages_students/ResultTable';
+import StudentDashboard from './pages_students/StudentDashboard';
+// import ResultTable from './pages_students/ResultTable';
 
 const App = () => {
 
@@ -87,9 +87,9 @@ const App = () => {
           <Route path="create-new-result" element={<CreateResult />} />
         </Route>
                     {/* student Routes */}
-        <Route path="/students" element={<MainLayoutinst />}>
-          <Route index element={<StudentDashboard />} />
-          <Route path="results" element={<ResultTable/>} />
+        <Route path="/students" element={<StudentDashboard />}>
+          {/* <Route index element={<StudentDashboard />} /> */}
+          {/* <Route path="results" element={<ResultTable/>} /> */}
         </Route>
 
 
