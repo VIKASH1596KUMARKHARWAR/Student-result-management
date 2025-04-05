@@ -6,10 +6,24 @@ html, body {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa; /* Light background color for a clean look */
+  background-color: #f8f9fa;
   scroll-behavior: smooth; /* Smooth scrolling */
   font-size: 1rem; /* Base font size */
+
+
+
+  /* margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; */
 }
+
 
 /* Trigger Button Styles */
 .trigger {
@@ -178,7 +192,7 @@ body {
 
 /* Dashboard Styles */
 .dashboard-container {
-  background-color: #f8f9fa; /* Light background for the dashboard */
+  background-color: #2d6ba9; /* Light background for the dashboard */
   padding: 20px; /* Padding for spacing */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -325,21 +339,31 @@ img {
   height: auto; /* Maintain aspect ratio */
 }
 .container {
-  max-width: 600px; /* Set a max width for the form */
-  margin: auto; /* Center the container */
-  padding: 20px; /* Padding for spacing */
+  max-width: 600px;
+  margin: auto;
+  padding: 24px;
+  background: linear-gradient(to bottom right,rgb(182, 84, 71),rgb(79, 160, 225));
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: #003366;
 }
 
 /* Custom styles for AttendanceList */
 .table th, .table td {
   vertical-align: middle; /* Aligns text in the center */
+  background: linear-gradient(to bottom right, #d9d9f7, #e6ebef);
+  /* border-radius: 12px; */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 /* Custom styles for EditUser component */
 .alert {
   margin-bottom: 20px; /* Space below alert */
 }
 .students-container {
-  background-color: #f4f4f4; /* Light gray background */
+  /* background-color: #f4f4f4;  */
+  background: linear-gradient(to bottom right,rgb(182, 84, 71),rgb(79, 160, 225));
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   min-height: 100vh; /* Ensure it covers the full viewport height */
   padding: 20px; /* Add some padding for aesthetics */
   overflow-y: auto; /* Allows scrolling within this container */
@@ -353,9 +377,11 @@ img {
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom right,rgb(182, 84, 71),rgb(79, 160, 225));
+
+  /* background: linear-gradient(to bottom right, #7ab8eb, #dbefff); */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .create-result-container h2 {
@@ -386,7 +412,7 @@ img {
   background-color: #0056b3;
 }
 
-
+/* 
 .register-container {
   display: flex;
   justify-content: center;
@@ -465,7 +491,11 @@ img {
 
 .register-button:hover {
   background-color: #40a9ff;
-}
+} */
+
+
+
+/* 
 .login-container {
   display: flex;
   justify-content: center;
@@ -535,4 +565,5 @@ img {
 
 .register-link a:hover {
   text-decoration: underline;
-}
+}  */
+

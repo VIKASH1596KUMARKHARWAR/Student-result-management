@@ -6,6 +6,7 @@
     "@ant-design/charts": "^2.2.1",
     "@ant-design/plots": "^2.3.2",
     "@antv/util": "^3.3.10",
+    "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.4",
@@ -31,7 +32,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "craco start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

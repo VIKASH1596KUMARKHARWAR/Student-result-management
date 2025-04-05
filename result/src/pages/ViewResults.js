@@ -53,10 +53,21 @@ const ViewResults = () => {
   };
 
   return (
+    <div
+    style={{
+        padding: "24px",
+        background: "linear-gradient(to bottom right, rgb(182, 84, 71), rgb(79, 160, 225))",
+        minHeight: "100vh",
+        color: "#fff",
+        fontSize: "1.2rem",
+    }}
+    className="container"
+>
+    
     <div className="view-user p-5">
       <nav aria-label="breadcrumb">
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">
+      <ol className="breadcrumb bg-light p-2 rounded">
+      <li className="breadcrumb-item">
             <Link to="/admin/results">Results</Link>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
@@ -137,6 +148,7 @@ const ViewResults = () => {
         </div>
         <button type="submit" className="btn btn-primary">Add Result</button>
       </form>
+    </div>
     </div>
   );
 };

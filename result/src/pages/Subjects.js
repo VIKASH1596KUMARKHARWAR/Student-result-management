@@ -27,28 +27,58 @@ const Subjects = () => {
         <select
           value={selectedSemester}
           onChange={(e) => setSelectedSemester(e.target.value)}
-          className="form-select"
-          style={{ width: '200px' }} // Adjust width for better visibility
+          className="form-select shadow"
+          style={{
+            width: "250px",
+            color: "#ffffff", // white text for better contrast
+            fontWeight: "600",
+            border: "none",
+            padding: "10px 12px",
+            borderRadius: "12px",
+            background: "linear-gradient(to right, rgb(182, 84, 71), rgb(79, 160, 225))",
+            appearance: "none",
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            cursor: "pointer",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.15)",
+          }}
         >
-          <option value="1">Semester 1</option>
-          <option value="2">Semester 2</option>
-          <option value="3">Semester 3</option>
-          <option value="4">Semester 4</option>
-          <option value="5">Semester 5</option>
-          <option value="6">Semester 6</option>
-          <option value="7">Semester 7</option>
-          <option value="8">Semester 8</option>
-          {/* Add more options as needed */}
+          {Array.from({ length: 8 }, (_, i) => (
+            <option
+              key={i + 1}
+              value={i + 1}
+              style={{
+                color: "#000",
+                background: "#fff",
+              }}
+            >
+              Semester {i + 1}
+            </option>
+          ))}
         </select>
+
+
       </div>
 
-          <h3 className="card-title mt-5">Subjects for Semester {selectedSemester}</h3>
+      <h3 className="card-title mt-5">Subjects for Semester {selectedSemester}</h3>
       <div className="card mb-4 mt-2">
         <div className="card-body">
           {selectedSubjects && selectedSubjects.subjects.length > 0 ? (
             <ul className="list-group">
               {selectedSubjects.subjects.map((subject, index) => (
-                <li key={index} className="list-group-item">
+                <li
+                  key={index}
+                  className="list-group-item mb-2"
+                  style={{
+                    background: "linear-gradient(to bottom right, #d9d9f7, #e6ebef)",
+                    border: "none",
+                    borderRadius: "8px",
+                    padding: "12px 16px",
+                    fontWeight: "500",
+                    color: "#333",
+                    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
+                  }}
+                >
                   {subject}
                 </li>
               ))}

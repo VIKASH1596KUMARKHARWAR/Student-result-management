@@ -42,6 +42,16 @@ const EditResultForm = () => {
 
 
     return (
+        <div
+        style={{
+            padding: "24px",
+            background: "linear-gradient(to bottom right, rgb(182, 84, 71), rgb(79, 160, 225))",
+            minHeight: "100vh",
+            color: "#fff",
+            fontSize: "1.2rem",
+        }}
+        className="container"
+    >
         <div className="edit-result-form p-5">
             <h3>Edit Result for Semester {semester}</h3>
             {error && <div className="alert alert-danger">{error}</div>}
@@ -60,6 +70,7 @@ const EditResultForm = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Update Result</button>
             </form>
+        </div>
         </div>
     );
 };

@@ -27,8 +27,17 @@ const MainLayout = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={[""]}
+          // onClick={({ key }) => {
+          //   navigate(key);
+          // }}
           onClick={({ key }) => {
-            navigate(key);
+            if (key === 'logout') {
+              localStorage.removeItem('token');
+              localStorage.removeItem('user');
+              navigate('/');
+            } else {
+              navigate(key);
+            }
           }}
           items={[
             {
@@ -66,6 +75,11 @@ const MainLayout = () => {
               icon: <FaClipboardList className="fs-4" />,
               label: "Reports",
             },
+            {
+              key: "logout",
+              icon: <FaClipboardList className="fs-4" />,
+              label: "Logout",
+            },
           ]}
         />
       </Sider>
@@ -74,12 +88,11 @@ const MainLayout = () => {
           className="d-flex justify-content-between align-items-center ps-1 pe-5"
           style={{
             padding: 0,
-            background: "#f0f8ff",
+            background: "#e0f7fa",
             position: "relative",
             zIndex: 1,
           }}
         >
-          {/* Toggle Button */}
           <div style={{ zIndex: 2 }}>
             {React.createElement(
               collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -104,20 +117,9 @@ const MainLayout = () => {
           </div>
           <div className="d-flex gap-4 align-items-center">
             <div className="d-flex gap-3 align-items-center dropdown">
-              <img
-                width={32}
-                height={32}
-                src="https://example.com/your-profile-image.jpg"
-                alt="Profile"
-                className="img-fluid rounded-circle"
-              />
               <div className="dropdown">
-                <h5 className="mb-0">Vikash</h5>
-                <p className="mb-0">your-email@example.com</p>
+
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/profile">
-                    View Profile
-                  </Link>
                   <Link className="dropdown-item" to="/admin/students">
                     Students
                   </Link>
@@ -133,9 +135,7 @@ const MainLayout = () => {
                   <Link className="dropdown-item" to="/admin/attendance">
                     Attendance
                   </Link>
-                  <Link className="dropdown-item" to="/signout">
-                    Signout
-                  </Link>
+
                 </div>
               </div>
             </div>

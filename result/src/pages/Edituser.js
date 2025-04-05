@@ -38,16 +38,16 @@ const EditUser = () => {
   return studentData ? (
     <div className="container mt-4">
 
-<nav aria-label="breadcrumb">
-    <ol className="breadcrumb">
-        <li className="breadcrumb-item">
+      <nav aria-label="breadcrumb" className="mb-4">
+        <ol className="breadcrumb p-2 rounded">
+          <li className="breadcrumb-item">
             <Link to="/admin/students">Students</Link>
-        </li>
-        <li className="breadcrumb-item active" aria-current="page">
+          </li>
+          <li className="breadcrumb-item active" aria-current="page">
             Edit Student
-        </li>
-    </ol>
-</nav>
+          </li>
+        </ol>
+      </nav>
 
       {alert && (
         <div className="alert alert-success alert-dismissible fade show" role="alert">

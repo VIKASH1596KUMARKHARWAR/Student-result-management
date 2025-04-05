@@ -5,6 +5,7 @@ import { getAllStudents } from './api'; // Adjust the import path based on your 
 const Results = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [resultsData, setResultsData] = useState([]);
+  // eslint-disable-next-line
   const [sortBySemester, setSortBySemester] = useState(false);
   const navigate = useNavigate();
 
@@ -40,7 +41,11 @@ const Results = () => {
     : filteredResults;
 
   return (
-    <div>
+    <div   style={{
+      padding: "24px",
+      background: "linear-gradient(to bottom right,rgb(182, 84, 71),rgb(79, 160, 225))",
+      minHeight: "100vh",
+  }} className='container'>
       <div className="row">
         <div className="col-6">
           <h1>Results</h1>
